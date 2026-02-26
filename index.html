@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NYFCR — New York Federation of College Republicans</title>
+  <meta name="description" content="Modern, classic website for the New York Federation of College Republicans (NYFCR)." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand">NYFCR</div>
+      <nav class="nav-links">
+        <a href="#mission">Mission</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#network">Network</a>
+        <a href="#join" class="btn btn-primary">Join</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy" data-animate data-parallax="0.15">
+          <p class="eyebrow">New York Federation of College Republicans</p>
+          <h1>Organizing principled student leadership across New York.</h1>
+          <p class="lead">NYFCR oversees College Republicans chapters statewide — building a professional, collaborative network of student leaders dedicated to public service and civic engagement.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#join">Join the Federation</a>
+            <a class="btn btn-secondary" href="#mission">Read the Mission</a>
+          </div>
+          <div class="trust-row">
+            <div><span class="metric">Statewide</span><span class="label">chapter network</span></div>
+            <div><span class="metric">Student-led</span><span class="label">civic leadership</span></div>
+            <div><span class="metric">Since 2021</span><span class="label">independent federation</span></div>
+          </div>
+        </div>
+        <div class="hero-card float-card" data-animate data-parallax="0.25">
+          <div class="card-label">Affiliations</div>
+          <h3>Collaborative by design</h3>
+          <p>NYFCR works alongside the New York Republican State Committee, New York State Young Republicans, and the New York Young Republican Club.</p>
+          <a class="btn btn-tertiary" href="#network">Explore the Network</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="mission" class="section">
+      <div class="container two-col" data-animate>
+        <div>
+          <h2>Mission</h2>
+          <p>NYFCR is a collaborative, statewide federation of college and university students who support the Republican Party of the United States and strengthen civic leadership across New York.</p>
+          <p>In 2021, NYFCR withdrew from the College Republican National Committee and now functions as a collaborative organization with partners across the state.</p>
+        </div>
+        <div class="stats">
+          <div class="stat">
+            <div class="metric">Statewide</div>
+            <div class="label">chapter oversight</div>
+          </div>
+          <div class="stat">
+            <div class="metric">Independent</div>
+            <div class="label">federation model</div>
+          </div>
+          <div class="stat">
+            <div class="metric">2024</div>
+            <div class="label">chartered with CRA</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="leadership" class="section section-dark">
+      <div class="container" data-animate>
+        <h2>Leadership</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Executive Board</h3>
+            <p>The executive board is made up of ten positions led by a chairperson.</p>
+          </article>
+          <article class="card">
+            <h3>Chairman</h3>
+            <p>Steven Margolis (Baruch College) currently serves as chairman.</p>
+          </article>
+          <article class="card">
+            <h3>Student‑Led</h3>
+            <p>Chapters are built and led by students across New York’s colleges and universities.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="network" class="section">
+      <div class="container" data-animate>
+        <h2>Network & Affiliations</h2>
+        <div class="platform">
+          <div>
+            <h4>New York Republican State Committee</h4>
+            <p>State party collaboration and civic alignment.</p>
+          </div>
+          <div>
+            <h4>New York State Young Republicans</h4>
+            <p>Cross‑generational leadership and mentorship.</p>
+          </div>
+          <div>
+            <h4>New York Young Republican Club</h4>
+            <p>Strategic partnerships and statewide engagement.</p>
+          </div>
+          <div>
+            <h4>College Republicans of America</h4>
+            <p>Chartered nationally with the CRA as of 2024.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="join" class="section cta">
+      <div class="container cta-inner" data-animate>
+        <div>
+          <h2>Join the Federation</h2>
+          <p>Build your chapter. Lead your campus. Shape New York’s civic future.</p>
+        </div>
+        <form class="donate-form" aria-label="Join form">
+          <label>
+            Campus
+            <input type="text" placeholder="University / College" required />
+          </label>
+          <label>
+            Email
+            <input type="email" placeholder="you@email.com" required />
+          </label>
+          <button class="btn btn-primary" type="submit">Request Info</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© 2026 New York Federation of College Republicans</div>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => nav.classList.toggle('open'));
+
+    const animated = document.querySelectorAll('[data-animate]');
+    const reveal = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          reveal.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    animated.forEach(el => reveal.observe(el));
+
+    const parallaxEls = document.querySelectorAll('[data-parallax]');
+    const hero = document.getElementById('hero');
+    const onScroll = () => {
+      const y = window.scrollY;
+      parallaxEls.forEach(el => {
+        const speed = parseFloat(el.dataset.parallax || '0.15');
+        el.style.transform = `translateY(${y * speed * -0.2}px)`;
+      });
+      if (hero) hero.style.setProperty('--glow-shift', `${Math.min(y * 0.12, 60)}px`);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  </script>
+</body>
+</html>
